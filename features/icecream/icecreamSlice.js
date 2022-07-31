@@ -15,6 +15,12 @@ const icecreamSlice = createSlice({
       state.numOfIce += action.payload;
     },
   },
+  // first way of using extra reducer
+  extraReducers:{
+    ['cake/ordered']: (state) =>{
+      state.numOfIce--;
+    },
+  }
 });
 
 module.exports = icecreamSlice.reducer;

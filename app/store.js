@@ -4,14 +4,14 @@ const cakeReducer = require("../features/cake/cakeSlice");
 
 const iceReducer = require("../features/icecream/icecreamSlice");
 
-const logger = reduxLogger.createLogger();
+// const logger = reduxLogger.createLogger();
 
 const store = configureStore({
   reducer: {
     cake: cakeReducer,
     ice: iceReducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
 module.exports = store;
